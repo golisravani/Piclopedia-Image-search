@@ -1,0 +1,140 @@
+*{
+   
+    background-color: black;
+    color: white;
+}
+.main-section h1{
+    background-size: contain;
+    font-size: 80px;
+    background-image: url(./image.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 30px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+        font-family: "Pacifico", serif;
+   font-weight: 400;
+        font-style: normal;
+}
+.search-area{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#search-text{
+    border-bottom: 2mm ridge #ff8fab;  
+      min-height: 30px;
+    width: 20%;
+    text-align: center;
+    margin-right: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: snow;
+}
+.search-btn{
+    border-radius: 5px;
+    color: rgb(216, 212, 212);
+    background-color:#ff8fab;
+    border: none;
+    min-width: auto;
+    min-height: 30px;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background-color: snow;
+    color: #ff8fab;;
+    transition: all 0.5s ease-in;
+}
+
+.search-result{
+    margin: 100px auto 50px;
+    width: 80%;
+    height: 100%;
+    display:  grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+
+}
+.search-result img{
+object-fit: contain;
+width: 100%;
+height: 330px;
+}
+.search-result a{
+    text-decoration: underline  dotted snow;
+    color: #ff8fab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search-result img:hover{
+    opacity: 0.5;
+ 
+}
+.showBtn{
+  display: block;
+  color: #f0436f;
+background-color: snow;
+width: 80px;
+min-height: 30px;
+border: none;
+border-radius: 10px;
+margin: 0 auto;
+text-align: center;
+display: none;
+}
+.showBtn:hover{
+    background-color:   #f0436f;
+    color: snow;
+    cursor: pointer;
+}
+.spinner{
+    display: none;
+    border: 10px solid gray;
+    border-radius: 50%;
+ width: 5%;
+ height: 5%;
+ animation: spin 1s linear infinite;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, 50%);
+ z-index: 1000;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);;
+    }
+}
+
+@media screen and (max-width:768px)  {
+.search-result{
+    width: 45%;
+grid-template-columns: 1fr 1fr;  
+column-gap: 20px;
+row-gap: 20px;
+}
+#search-text{
+    width: 40%;
+}
+}
+
+@media screen and (max-width:480px)  {
+    .search-result{
+        width: 100%;
+        grid-template-columns: 1fr;  
+        row-gap: 15px;
+    }
+    .main-section h1{
+        font-size: 40px;
+    }
+}
